@@ -1,0 +1,118 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Tema oscuro */
+body.dark-theme {
+    background-color: #000;
+    color: white;
+}
+
+body.dark-theme #botonseccion1 {
+    background-color: #42C83C;
+}
+
+body.dark-theme #botonseccion1:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Tema claro */
+body.light-theme {
+    background-color: #fff;
+    color: black;
+}
+
+body.light-theme #botonseccion1 {
+    background-color: #4287f5;
+}
+
+body.light-theme #botonseccion1:hover {
+    background-color: black;
+    color: white;
+}
+
+#seccion1,
+.seccion2 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#seccion1 {
+    background-image: url(img/wp4780558-billie-eilish-glasses-wallpapers\ 1.png);
+    background-size: cover;
+}
+
+#spotify,
+#spotify2 {
+    width: 140px;
+
+    
+    -webkit-animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	        animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+#tpseccion1 {
+    text-align: center;
+}
+
+#tituloseccion1 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.para-columna {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+#botonseccion1 {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-options {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+}
+
+.theme-light,
+.theme-dark {
+    width: 100px;
+    cursor: pointer;
+}
+
+.theme-light img,
+.theme-dark img {
+    width: 100%;
+}
+
+.seccion2 {
+    background-image: url(img/fondoseccion2.png);
+    background-size: cover;
+}

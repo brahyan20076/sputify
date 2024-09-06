@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="spotify.css">
+</head>
+
+<body class="dark-theme"> <!-- Por defecto, se inicia con el tema oscuro -->
+
+    <!-- Sección 1 -->
+    <div id="seccion1">
+        <div class="logo-container">
+            <img id="spotify" src="img/Vector.png" alt="Spotify Logo">
+        </div>
+        <div id="tpseccion1" class="content-section">
+            <h3 id="tituloseccion1">Enjoy Listening To Music</h3>
+            <p class="para-columna">
+                <span class="column">Lorem ipsum dolor sit amet.</span>
+                <span class="column">Consectetur adipiscing elit. Sagittis enim</span>
+                <span class="column">Purus sed phasellus. Cursus ornare id</span>
+                <span class="column">Scelerisque aliquam</span>
+            </p>
+            <button id="botonseccion1">Get started</button>
+        </div>
+    </div>
+
+    <!-- Sección 2 -->
+    <div class="seccion2">
+        <div class="logo-container">
+            <img id="spotify2" src="img/Vector.png" alt="Spotify Logo">
+        </div>
+        <div id="cambiodetema">
+            <h2>Choose Mode</h2>
+            <div class="theme-options">
+                <div class="theme-light">
+                    <img src="img/temaclaro.png" alt="Light Theme" title="Light Theme">
+                </div>
+                <div class="theme-dark">
+                    <img src="img/temaoscuro.png" alt="Dark Theme" title="Dark Theme">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Mostrar y ocultar secciones con animaciones
+            $("#tpseccion1").hide();
+            setTimeout(function () {
+                $("#tpseccion1").fadeIn(1000);
+            }, 2100);
+
+            $(".seccion2").hide();
+            $("#botonseccion1").click(function () {
+                $("#seccion1").fadeOut(500, function () {
+                    $(".seccion2").fadeIn(500);
+                });
+            });
+
+            // Funcionalidad de cambio de tema
+            $(".theme-light").click(function () {
+                $("body").removeClass("dark-theme").addClass("light-theme");
+            });
+
+            $(".theme-dark").click(function () {
+                $("body").removeClass("light-theme").addClass("dark-theme");
+            });
+        });
+    </script>
+</body>
+
+</html>
